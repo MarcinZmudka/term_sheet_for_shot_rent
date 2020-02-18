@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+.boxOfLayers{
+    position: relative;
+    width: 80vw;
+    height: 500px;
+    margin: 15px;
+    font-family: 'Sriracha', cursive;
+}
+.reservationList{
+    display: block;
+    width: 70vw;
+    padding: 30px;
+    font-family: 'Sriracha', cursive;
+    letter-spacing: 2px;
+    text-shadow: black 0px 0px 2px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: black 0px 0px 10px;
+}

@@ -1,0 +1,13 @@
+.ReservationsSheet_box {
+  width: 80vw;
+  height: 500px;
+  background-color: rgb(253, 0, 0, 0);
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  overflow: hidden;
+  border-radius: 10px;
+}
