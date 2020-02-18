@@ -4,7 +4,7 @@
 
 
 .App-header {
-  background-color: #c5c5c5;
+  background-image: url("./email-pattern.png");
   min-height: 100vh;
   display: flex;
   flex-direction: column;

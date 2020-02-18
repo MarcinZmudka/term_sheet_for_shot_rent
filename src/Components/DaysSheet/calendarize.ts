@@ -1,4 +1,4 @@
-export default function (target: Date, offset: number) {
+export default function(target: Date, offset: number) {
 	var i=0, j=0, week, out=[], date = new Date(target || new Date);
 	var year = date.getFullYear(), month = date.getMonth();
 	// day index (of week) for 1st of month

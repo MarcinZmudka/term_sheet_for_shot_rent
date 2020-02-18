@@ -15,10 +15,9 @@ const ReservationSheet: React.FC<IProps> = ({ reservations, monthInt }) => {
       if (day > max) max = day;
     })
   );
-  console.log(max)
   return (
     <>
-      {reservations.map((reservation: Reservation) => {
+      {reservations.map((reservation: Reservation, index) => {
         const arrivalDay = new Date(reservation.przyjazd).getUTCDate();
         const arrivalMonth = new Date(reservation.przyjazd).getMonth() + 1;
         const departureDay = new Date(reservation.wyjazd).getUTCDate();
@@ -37,9 +36,9 @@ const ReservationSheet: React.FC<IProps> = ({ reservations, monthInt }) => {
               backgroundColor: `${reservation.color}`,
               WebkitClipPath: `${firstOrLastDay(i, departureDay - arrivalDay)}`
             };
-            arrayOfDivs.push(<div className="test" style={style}></div>);
+            arrayOfDivs.push(<div className="test" key={Math.round(Math.random()*100000)} style={style}></div>);
           }
-          return <div className="ReservationsSheet_box">{arrayOfDivs}</div>;
+          return <div key={Math.round(Math.random()*100000)} className="ReservationsSheet_box">{arrayOfDivs}</div>;
         }
         if (arrivalMonth == monthInt + 1) {
           let arrayOfDivs = [];
