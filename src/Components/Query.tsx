@@ -26,6 +26,10 @@ interface response {
   imieINazwiskoGoscia: string;
   iloscGosci: Number;
   color: string;
+  iloscNocy: number;
+  booking: string;
+  mail: string;
+  uwagi: string;
 }
 
 const QueryComponent: React.FC = () => {
@@ -49,7 +53,11 @@ const QueryComponent: React.FC = () => {
       <MonthSwitcher month={month} setMonth={setMonth} />
       <div className="boxOfLayers">
         <DaysSheet monthInt={month.monthInt} />
-        <ReservationSheet reservations={monthReservation} monthInt={month.monthInt} />)
+        <ReservationSheet
+          reservations={monthReservation}
+          monthInt={month.monthInt}
+        />
+        )
       </div>
       {monthReservation.map(
         ({
@@ -58,7 +66,11 @@ const QueryComponent: React.FC = () => {
           kwota,
           imieINazwiskoGoscia,
           iloscGosci,
-          color
+          color,
+          iloscNocy,
+          booking,
+          mail,
+          uwagi
         }: response) => (
           <div key={imieINazwiskoGoscia}>
             <div
@@ -71,12 +83,15 @@ const QueryComponent: React.FC = () => {
               <div className="option">
                 Wyjazd: {new Date(wyjazd).toDateString()}
               </div>
+              <div className="option">Ilość nocy: {iloscNocy}</div>
               <div className="option">Kwota: {kwota}PLN</div>
               <div className="option">
                 Imię i Nazwisko: {imieINazwiskoGoscia}
               </div>
               <div className="option">Ilość gości: {iloscGosci}</div>
-              <div className="option">coś jeszcze</div>
+              <div className="option">Z : {booking}</div>
+              <div className="option">Mail: {mail}</div>
+              <div className="option">Uwagi: {uwagi}</div>
             </div>
           </div>
         )
