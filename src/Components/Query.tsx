@@ -11,10 +11,15 @@ import Reservation from "./reservationSheet/reservation.interface";
 const GET_RESERVATIONS = gql`
   {
     rezerwacjes {
-      przyjazd
-      wyjazd
-      kwota
-      imieINazwiskoGoscia
+      imieINazwiskoGoscia,
+      kwota,
+      przyjazd,
+      wyjazd,
+      iloscNocy,
+      telefon,
+      mail
+      booking,
+      uwagi,
       iloscGosci
     }
   }
@@ -44,6 +49,7 @@ const QueryComponent: React.FC = () => {
   }
   if (data)
     data.rezerwacjes.map((item: response) => (item.color = `${randomColor()}`));
+    console.log(data.rezerwacjes);
   const monthReservation = data.rezerwacjes.filter((item: Reservation) => {
     if (new Date(item.przyjazd).getUTCMonth() == month.monthInt) return item;
     if (new Date(item.wyjazd).getUTCMonth() == month.monthInt) return item;
