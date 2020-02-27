@@ -4,7 +4,8 @@
 
 
 .App-header {
-  background-image: url("./email-pattern.png");
+  /* background-image: url("./prism.png"); */
+  background: rgb(235, 235, 235);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

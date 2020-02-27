@@ -33,6 +33,7 @@ const ReservationSheet: React.FC<IProps> = ({ reservations, monthInt }) => {
               gridColumnEnd: `${column + 2}`,
               gridRowStart: `${row + 1}`,
               gridRowEnd: `${row + 2}`,
+              margin: "2px",
               backgroundColor: `${reservation.color}`,
               WebkitClipPath: `${firstOrLastDay(i, departureDay - arrivalDay)}`
             };

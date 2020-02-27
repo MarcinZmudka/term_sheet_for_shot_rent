@@ -23,9 +23,9 @@ const DaysSheet: React.FC<IProps> = ({ monthInt }) => {
                 gridRowStart: `${index + 1}`,
                 gridRowEnd: `${index + 2}`,
                 border: "0px solid rgb(121, 121, 121)",
-                boxShadow: "#000 1px 1px 2px",
+                // boxShadow: "#000 1px 1px 2px",
                 boxSizing: "border-box",
-                margin: "0",
+                margin: "2px",
                 padding: "5px",
                 textAlign: "right",
                 color: `${days != 0 ? "#000" : "#FFF"}`

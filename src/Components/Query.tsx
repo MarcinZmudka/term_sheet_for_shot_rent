@@ -8,6 +8,7 @@ import setMonthName from "./monthSwitcher/setMonthName";
 import "./Query.css";
 import MonthSwitcher from "./monthSwitcher/MonthSwitcher";
 import Reservation from "./reservationSheet/reservation.interface";
+import Title from "./Title/Title";
 const GET_RESERVATIONS = gql`
   {
     rezerwacjes {
@@ -57,6 +58,7 @@ const QueryComponent: React.FC = () => {
   return (
     <>
       <MonthSwitcher month={month} setMonth={setMonth} />
+      <Title/>
       <div className="boxOfLayers">
         <DaysSheet monthInt={month.monthInt} />
         <ReservationSheet
